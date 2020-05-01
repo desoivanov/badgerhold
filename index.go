@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/dgraph-io/badger"
+	"github.com/dgraph-io/badger/v2"
 )
 
 const indexPrefix = "_bhIndex"
@@ -143,7 +143,7 @@ func (v *keyList) in(key []byte) bool {
 		return bytes.Compare((*v)[i], key) >= 0
 	})
 
-	return (i < len(*v) && bytes.Equal((*v)[i], key))
+	return i < len(*v) && bytes.Equal((*v)[i], key)
 }
 
 func indexExists(it *badger.Iterator, typeName, indexName string) bool {

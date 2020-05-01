@@ -8,8 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dgraph-io/badger"
-	"github.com/timshannon/badgerhold"
+	"github.com/dgraph-io/badger/v2"
+
+	"github.com/desoivanov/badgerhold"
 )
 
 func TestDelete(t *testing.T) {
@@ -61,10 +62,10 @@ func TestDeleteMatching(t *testing.T) {
 				if len(result) != (len(testData) - len(tst.result)) {
 					if testing.Verbose() {
 						t.Fatalf("Delete result count is %d wanted %d.  Results: %v", len(result),
-							(len(testData) - len(tst.result)), result)
+							len(testData)-len(tst.result), result)
 					}
 					t.Fatalf("Delete result count is %d wanted %d.", len(result),
-						(len(testData) - len(tst.result)))
+						len(testData)-len(tst.result))
 
 				}
 
