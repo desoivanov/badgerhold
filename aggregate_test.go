@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/desoivanov/badgerhold"
+	"github.com/ferocious-space/badgerhold"
 )
 
 func TestFindAggregateGroup(t *testing.T) {

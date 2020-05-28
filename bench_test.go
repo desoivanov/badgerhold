@@ -13,7 +13,7 @@ import (
 
 	"github.com/dgraph-io/badger/v2"
 
-	"github.com/desoivanov/badgerhold"
+	"github.com/ferocious-space/badgerhold"
 )
 
 type BenchData struct {
